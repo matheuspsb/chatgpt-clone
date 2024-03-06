@@ -1,10 +1,37 @@
+import { useState } from 'react';
 import './App.css';
+import { Sidebar } from './components/Sidebar';
 
 function App() {
+  const [sidebarOpened, setSidebarOpened] = useState(false);
+
+  const closeSideBar = () => {
+    setSidebarOpened(false);
+  }
+
+  const handleClearConversations = () => {
+
+  }
+
+  const handleNewChat = () => {
+
+  }
+
   return (
-    <div className="App">
-      <div className='text-red-400'>Teste</div>
-    </div>
+    <main className="flex min-h-screen bg-gpt-gray">
+      <Sidebar
+        open={sidebarOpened}
+        onClose={closeSideBar}
+        onClear={handleClearConversations}
+        onNewChat={handleNewChat}
+      >
+        <></>
+      </Sidebar>
+
+      <section className='flex flex-col w-full'>
+        <button onClick={() => setSidebarOpened(true)}>Open sidebar</button>
+      </section>
+    </main>
   );
 }
 

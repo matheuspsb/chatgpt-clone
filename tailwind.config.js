@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'gpt-gray': '#343541',
+        'gpt-lightgray': '#40414f'
+      }
+    },
   },
   plugins: [],
 }
