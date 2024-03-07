@@ -18,7 +18,7 @@ export const ChatMessageItem = ({ item }: Props) => {
 
         </div>
 
-        <div className="flex-1 text-base whitespace-pre-wrap">
+        <div className="flex-1 text-base text-white whitespace-pre-wrap">
           {item.body}
         </div>
       </div>
