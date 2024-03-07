@@ -1,6 +1,5 @@
 import { ChatMessage } from "../types/ChatMessage";
-import IconChatGpt from "./icons/IconChatGpt";
-import IconUser from "./icons/IconUser";
+import { IconChatGpt, IconUser } from "./icons";
 
 type Props = {
   item: ChatMessage
