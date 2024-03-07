@@ -6,3 +6,6 @@ export { default as IconSunTwentyFour} from "./IconSunTwentyFour";
 export { default as IconUser } from "./IconUser";
 export { default as IconChatGpt } from "./IconChatGpt";
 export { default as IconSend } from "./IconSend";
+export { default as IconChatLeft } from "./IconChatLeft";
+export { default as IconEdit2 } from "./IconEdit2";
+export { default as IconCheck } from "./IconCheck";
