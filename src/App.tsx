@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import './App.css';
 import { Sidebar } from './components/Sidebar';
+import { Header } from './components/Header';
 
 function App() {
   const [sidebarOpened, setSidebarOpened] = useState(false);
 
-  const closeSideBar = () => {
-    setSidebarOpened(false);
-  }
+  const openSidebar = () => setSidebarOpened(true);
+  const closeSideBar = () => setSidebarOpened(false);
 
   const handleClearConversations = () => {
 
@@ -25,11 +25,15 @@ function App() {
         onClear={handleClearConversations}
         onNewChat={handleNewChat}
       >
-        <></>
+        ...
       </Sidebar>
 
       <section className='flex flex-col w-full'>
-        <button onClick={() => setSidebarOpened(true)}>Open sidebar</button>
+        <Header
+          openSidebarClick={openSidebar}
+          title={`Bla bla bla`}
+          newChatClick={handleNewChat}
+        />
       </section>
     </main>
   );
