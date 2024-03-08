@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Chat } from "../types/Chat";
+import { Chat } from "../../types/Chat";
 import {
   IconChatLeft,
   IconCheck,
   IconClose,
   IconEdit2,
   IconTrash,
-} from "./icons";
+} from "../icons";
 
 type Props = {
   chatItem: Chat;

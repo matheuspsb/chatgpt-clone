@@ -1,4 +1,4 @@
-import { IconAdd, IconMenu } from "./icons";
+import { IconAdd, IconMenu } from "../icons";
 
 type Props = {
   openSidebarClick: () => void;

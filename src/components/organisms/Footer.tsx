@@ -1,4 +1,4 @@
-import { ChatMessageInput } from "./ChatMessageInput";
+import { ChatMessageInput } from "../molecules";
 
 type Props = {
   disabled: boolean;

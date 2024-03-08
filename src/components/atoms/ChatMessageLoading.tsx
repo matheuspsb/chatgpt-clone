@@ -1,4 +1,4 @@
-import { IconChatGpt } from "./icons"
+import { IconChatGpt } from "../icons"
 
 export const ChatMessageLoading = () => {
   return (

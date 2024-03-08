@@ -1,5 +1,6 @@
-import { SidebarButton } from "./SidebarButton";
-import { IconAdd, IconClose, IconTrash } from "./icons";
+
+import { SidebarButton } from "../atoms";
+import { IconAdd, IconClose, IconTrash } from "../icons";
 
 type Props = {
   children: React.ReactNode;

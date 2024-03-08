@@ -1,6 +1,6 @@
-import { ChatMessage } from "../types/ChatMessage";
-import { IconChatGpt, IconUser } from "./icons";
-import { useTypingEffect } from '../hooks/useTypingEffect';
+import { ChatMessage } from "../../types/ChatMessage";
+import { IconChatGpt, IconUser } from "../icons";
+import { useTypingEffect } from '../../hooks/useTypingEffect';
 
 type Props = {
   item: ChatMessage

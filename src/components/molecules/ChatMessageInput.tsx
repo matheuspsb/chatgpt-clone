@@ -1,5 +1,5 @@
 import { KeyboardEvent, useEffect, useRef, useState } from "react";
-import { IconSend } from "./icons";
+import { IconSend } from "../icons";
 
 type Props = {
   disabled: boolean;

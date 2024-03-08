@@ -1,8 +1,7 @@
 import { useEffect, useRef } from "react";
-import { Chat } from "../types/Chat";
-import { ChatMessageItem } from "./ChatMessageItem";
-import { ChatMessageLoading } from "./ChatMessageLoading";
-import { ChatPlaceholder } from "./ChatPlaceholder";
+import { Chat } from "../../types/Chat";
+import { ChatMessageLoading } from "../atoms";
+import { ChatMessageItem, ChatPlaceholder } from "../molecules";
 
 type Props = {
   chat: Chat | undefined;

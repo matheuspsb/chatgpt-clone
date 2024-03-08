@@ -1,4 +1,4 @@
-import { IconSunTwentyFour, IconThunderbolt, IconWarning } from "./icons";
+import { IconSunTwentyFour, IconThunderbolt, IconWarning } from "../icons";
 
 type Props = {
   onSend: (message: string) => void;
@@ -26,7 +26,7 @@ export const ChatPlaceholder = ({ onSend }: Props) => {
               handleClickExample("Explain quantum computing in simple terms")
             }
             className="bg-white/5 rounded text-center text-sm text-white
-          mb-3 p-3 cursor-pointer"
+          mb-3 p-3 cursor-pointer hover:bg-gray-600/50"
           >
             "Explain quantum computing in simple terms"
           </div>
@@ -38,7 +38,7 @@ export const ChatPlaceholder = ({ onSend }: Props) => {
               )
             }
             className="bg-white/5 rounded text-center text-sm text-white
-          mb-3 p-3"
+          mb-3 p-3 cursor-pointer hover:bg-gray-600/50"
           >
             "Got any creative ideas for a 10 years old's birthday?"
           </div>
@@ -48,7 +48,7 @@ export const ChatPlaceholder = ({ onSend }: Props) => {
               handleClickExample("How do I make an HTTP request in Javascript?")
             }
             className="bg-white/5 rounded text-center text-sm text-white
-          mb-3 p-3"
+          mb-3 p-3 cursor-pointer hover:bg-gray-600/50"
           >
             "How do I make an HTTP request in Javascript?"
           </div>
