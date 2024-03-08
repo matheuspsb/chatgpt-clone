@@ -27,20 +27,24 @@ function App() {
   const openSidebar = () => setSidebarOpened(true);
   const closeSideBar = () => setSidebarOpened(false);
 
-  const getAIResponse = () => {
-    setTimeout(() => {
-      let chatListClone = [...chatList];
-      let chatIndex = chatListClone.findIndex(item => item.id === chatActiveId);
-      if(chatIndex > -1) {
+  const getAIResponse = async () => {
+    let chatListClone = [...chatList];
+    let chatIndex = chatListClone.findIndex(item => item.id === chatActiveId);
+    if(chatIndex > -1) {
+      const response = await openai.generate(
+        openai.translateMessages(chatListClone[chatIndex].messages)
+      )
+
+      if(response) {
         chatListClone[chatIndex].messages.push({
           id: uuidv4(),
           author: 'ai',
-          body: "Aqui vai a resposta da AI :)",
+          body: response
         });
       }
-      setChatList(chatListClone);
-      setAILoading(false);
-    }, 2000)
+    }
+    setChatList(chatListClone);
+    setAILoading(false);
   }
 
   const handleClearConversations = () => {
@@ -108,12 +112,6 @@ function App() {
     setChatList(chatListClone);
   }
 
-  const handleTestOpenAI = async () => {
-    await openai.generate([
-      { role: 'user', content: 'Qual a capital do Brasil?'}
-    ]);
-  }
-
   return (
     <main className="flex min-h-screen bg-gpt-gray">
       <Sidebar
@@ -143,8 +141,6 @@ function App() {
         />
 
         <ChatArea chat={chatActive} loading={AILoading} />
-
-        <button onClick={handleTestOpenAI}>Testar OpenAI</button>
 
         <Footer disabled={AILoading} onSendMessage={handleSendMessage} />
       </section>
