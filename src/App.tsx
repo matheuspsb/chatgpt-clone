@@ -6,6 +6,7 @@ import { ChatArea } from "./components/ChatArea";
 import { Footer } from "./components/Footer";
 import { Chat } from "./types/Chat";
 import { SidebarChatButton } from "./components/SidebarChatButton";
+import { openai } from "./utils/openai";
 
 
 function App() {
@@ -107,6 +108,12 @@ function App() {
     setChatList(chatListClone);
   }
 
+  const handleTestOpenAI = async () => {
+    await openai.generate([
+      { role: 'user', content: 'Qual a capital do Brasil?'}
+    ]);
+  }
+
   return (
     <main className="flex min-h-screen bg-gpt-gray">
       <Sidebar
@@ -136,6 +143,8 @@ function App() {
         />
 
         <ChatArea chat={chatActive} loading={AILoading} />
+
+        <button onClick={handleTestOpenAI}>Testar OpenAI</button>
 
         <Footer disabled={AILoading} onSendMessage={handleSendMessage} />
       </section>
