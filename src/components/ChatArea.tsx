@@ -7,9 +7,10 @@ import { ChatPlaceholder } from "./ChatPlaceholder";
 type Props = {
   chat: Chat | undefined;
   loading: boolean;
+  onSend: (message: string) => void;
 }
 
-export const ChatArea = ({ chat, loading }: Props) => {
+export const ChatArea = ({ chat, loading, onSend }: Props) => {
   const scrollArea =  useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -18,7 +19,7 @@ export const ChatArea = ({ chat, loading }: Props) => {
 
   return (
     <section ref={scrollArea} className="flex-auto h-0 overflow-y-scroll">
-      {!chat && <ChatPlaceholder />}
+      {!chat && <ChatPlaceholder onSend={onSend} />}
       {chat && chat.messages.map(item => (
         <ChatMessageItem 
           key={item.id}

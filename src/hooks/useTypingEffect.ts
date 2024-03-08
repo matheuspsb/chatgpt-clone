@@ -13,7 +13,7 @@ export const useTypingEffect = (text: string, author: 'me' | 'ai') => {
         } else {
           clearInterval(interval);
         }
-      }, 20); // Ajuste a velocidade da digitação conforme necessário
+      }, 20);
 
       return () => clearInterval(interval);
     } else {

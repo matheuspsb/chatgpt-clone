@@ -12,13 +12,13 @@ export const Header = ({ openSidebarClick, title, newChatClick}: Props) => {
     border-b border-b-gray-600 p-2 md:hidden">
       
       <div onClick={openSidebarClick}>
-        <IconMenu width={24} height={24} />
+        <IconMenu width={24} height={24} color="white" />
       </div>
 
-      <div className="mx-2 truncate">{title}</div>
+      <div className="mx-2 truncate text-white">{title}</div>
 
       <div onClick={newChatClick}>
-        <IconAdd width={24} height={24} />
+        <IconAdd width={24} height={24} color="white" />
       </div>
 
     </header>

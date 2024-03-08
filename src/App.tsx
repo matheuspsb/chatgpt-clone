@@ -140,7 +140,7 @@ function App() {
           newChatClick={handleNewChat}
         />
 
-        <ChatArea chat={chatActive} loading={AILoading} />
+        <ChatArea chat={chatActive} loading={AILoading} onSend={handleSendMessage} />
 
         <Footer disabled={AILoading} onSendMessage={handleSendMessage} />
       </section>
